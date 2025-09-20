@@ -35,3 +35,10 @@ docker exec -it pgadmin4_app ping -c1 db_serv
 Зайти в psql внутри контейнера Postgres:
 
 docker exec -it local_postgre psql -U postgres
+
+
+
+docker compose up --build
+docker compose up -d --build
+docker compose down --remove-orphans
+docker compose logs -f
