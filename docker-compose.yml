@@ -26,8 +26,8 @@ services:
     ports:
       - "8888:80"
     environment:
-      PGADMIN_DEFAULT_EMAIL: bag.dat@live.ru
-      PGADMIN_DEFAULT_PASSWORD: Qwerty1+
+      PGADMIN_DEFAULT_EMAIL: postgres
+      PGADMIN_DEFAULT_PASSWORD: 2015
     volumes:
       - pgadmin-data:/var/lib/pgadmin
 
