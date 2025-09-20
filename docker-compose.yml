@@ -10,19 +10,14 @@ services:
       POSTGRES_PASSWORD: 2015
     volumes:
       - local_pgdata:/var/lib/postgresql/data
+    networks:
+      - kezekshi_net
 
-  # pgadmin_serv:
-  #   image: dpage/pgadmin4
-  #   container_name: pgadmin4_app
-  #   restart: always
-  #   ports:
-  #     - "8888:80"
-  #   environment:
-  #     PGADMIN_DEFAULT_EMAIL: postgres
-  #     PGADMIN_DEFAULT_PASSWORD: 2015
-  #   volumes:
-  #     - pgadmin-data:/var/lib/pgadmin
+networks:
+  kezekshi_net:
+    # Объявляем, что эта сеть может использоваться другими
+    name: kezekshi_net_global 
+    driver: bridge
 
 volumes:
   local_pgdata:
-  # pgadmin-data:
